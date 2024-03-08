@@ -12,9 +12,6 @@ function App() {
       setUrl(tabs[0].url!);
     });
   }, []);
-  useEffect(() => {
-    url && ref.current?.select();
-  }, [url]);
 
   return (
     <>
@@ -38,7 +35,7 @@ function App() {
           value={url}
           onChange={(e) => setUrl(e.target.value)}
         ></input>
-        <CopyToClipboard text={url}>
+        <CopyToClipboard text={url} onCopy={() => ref.current?.select()}>
           <button className="qr-code-button">复制</button>
         </CopyToClipboard>
       </div>
