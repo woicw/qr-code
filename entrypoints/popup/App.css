@@ -13,6 +13,7 @@
 
 .qr-code-svg {
   border: 2px solid #999;
+  background: #fff;
   border-radius: 8px;
   padding: 24px;
 }
